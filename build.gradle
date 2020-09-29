@@ -20,7 +20,9 @@ task junit(type: Test) {
 }
 
 task testng(type: Test) {
-    useTestNG()
+    useTestNG() {
+        suites 'src/test/resources/testng.xml'
+    }
 }
 
 test.dependsOn junit
